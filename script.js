@@ -1,35 +1,49 @@
-  function openDetail() {
-    document.getElementById('main-page').style.display = 'none';
-    document.getElementById('detail-page').style.display = 'block';
+  function openDetail(index) {
+    document.getElementById('list-view').style.display = 'none';
+    document.getElementById('detail-view').style.display = 'block';
     window.scrollTo(0, 0);
   }
 
   function goBack() {
-    document.getElementById('detail-page').style.display = 'none';
-    document.getElementById('main-page').style.display = 'block';
+    document.getElementById('detail-view').style.display = 'none';
+    document.getElementById('list-view').style.display = 'block';
   }
 
-  function setFilter(btn) {
-    var btns = document.querySelectorAll('.filter-btn');
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].classList.remove('active');
-    }
-    btn.classList.add('active');
+  function toggleHeart(event, btn) {
+    event.stopPropagation();
+    btn.textContent = btn.textContent === '🤍' ? '❤️' : '🤍';
   }
 
-  function setDay(btn) {
-    var days = document.querySelectorAll('.day');
-    for (var i = 0; i < days.length; i++) {
-      days[i].classList.remove('active');
-    }
-    btn.classList.add('active');
+  function book() {
+    alert('Бронирование подтверждено! ✅');
   }
 
-  function bookPlace() {
-    alert('Бронирование подтверждено!');
-  }
+  // Filter chips
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
 
-  if (window.Telegram) {
+  // Day buttons
+  document.querySelectorAll('.day-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Nav buttons
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('nav').querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Telegram WebApp integration
+  if (window.Telegram && window.Telegram.WebApp) {
     Telegram.WebApp.ready();
     Telegram.WebApp.expand();
   }
