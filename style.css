@@ -1,0 +1,253 @@
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    background-color: white;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .header h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+  }
+
+  .filters {
+    display: flex;
+    gap: 8px;
+  }
+
+  .filter-btn {
+    background-color: #eee;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 12px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .filter-btn.active {
+    background-color: #FFD700;
+  }
+
+  .cards {
+    padding: 12px;
+    padding-bottom: 80px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+  }
+
+  .card-emoji {
+    font-size: 50px;
+    text-align: center;
+    padding: 25px;
+    background-color: #e8e8e8;
+  }
+
+  .card-info {
+    padding: 12px;
+  }
+
+  .card-title {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .card-rating {
+    color: gray;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .seats {
+    color: gray;
+    font-size: 13px;
+  }
+
+  .time-badge {
+    background-color: #FFD700;
+    border-radius: 6px;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .time-badge.gray {
+    background-color: #eee;
+  }
+
+  /* нижнее меню */
+  .bottom-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 20px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .menu-item {
+    background: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 11px;
+    color: gray;
+  }
+
+  .menu-item .icon {
+    font-size: 22px;
+    display: block;
+  }
+
+  .menu-item.active {
+    background-color: #FFD700;
+    border-radius: 10px;
+    padding: 4px 10px;
+  }
+
+  /* детальная страница */
+  #detail-page {
+    display: none;
+  }
+
+  .detail-img {
+    font-size: 70px;
+    text-align: center;
+    padding: 30px;
+    background: #ddd;
+  }
+
+  .back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .detail-top {
+    position: relative;
+  }
+
+  .detail-info {
+    background: white;
+    padding: 15px;
+    margin-bottom: 8px;
+  }
+
+  .detail-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .detail-meta {
+    color: gray;
+    font-size: 13px;
+  }
+
+  .book-button {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 0 15px 10px 15px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .schedule {
+    background: white;
+    padding: 15px;
+    margin-bottom: 8px;
+  }
+
+  .schedule h4 {
+    margin: 0 0 10px 0;
+  }
+
+  .time-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .time-row:last-child {
+    border-bottom: none;
+  }
+
+  .time-label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .slot {
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .green { background-color: #4CAF50; }
+  .orange { background-color: #FF9800; }
+  .red { background-color: #F44336; }
+
+  .days {
+    background: white;
+    padding: 15px;
+    margin-bottom: 80px;
+  }
+
+  .days-row {
+    display: flex;
+    gap: 6px;
+  }
+
+  .day {
+    flex: 1;
+    background: #eee;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    color: gray;
+  }
+
+  .day.active {
+    background-color: #FFD700;
+    color: black;
+  }
